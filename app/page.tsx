@@ -60,7 +60,7 @@ export default function Home() {
             Login
           </a>
 
-          <a href="/signup" className="nav-button">
+          <a href="/register" className="nav-button">
             Register
           </a>
         </div>
@@ -388,7 +388,7 @@ export default function Home() {
             Take the next step towards your future.
           </p>
 
-          <a href="/signup" className="wc-primary-button">
+          <a href="/register" className="wc-primary-button">
             Start Your Journey <span>↗</span>
           </a>
         </section>
