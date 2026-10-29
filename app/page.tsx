@@ -1,69 +1,194 @@
-import Image from "next/image";
 
-export default function Home() {
+export default function Home()
+{
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+    <>
+      <header className="navbar">
+        <a href="#home" className="logo">
+          Learnora<span>.</span>
+        </a>
+
+        <nav>
+          <a href="#home">Home</a>
+          <a href="/courses">Courses</a>
+          <a href="#about">About</a>
+        </nav>
+
+        
+<div className="nav-actions">
+  <a href="/login" className="login-nav-button">
+    Login
+  </a>
+
+  <a href="/courses" className="nav-button">
+    Explore Courses
+  </a>
+</div>
+
+      </header>
+
+      <main>
+        <section className="hero" id="home">
+          <div className="hero-content">
+            <p className="eyebrow">LEARN. BUILD. GROW.</p>
+
+            <h1>
+              Skills that move your <span>future forward.</span>
+            </h1>
+
+            <p className="hero-description">
+              Learn coding, business and design through practical,
+              expert-led courses built for your next big step.
+            </p>
+
+            <a href="#courses" className="primary-button">
+              Explore Courses &rarr;
+            </a>
+
+            <p className="hero-note">
+              Practical skills. Real-world projects.
+            </p>
+          </div>
+
+          <div className="hero-visual">
+            <div className="visual-card">
+              <div className="visual-top">
+                <span className="dot purple"></span>
+                <span className="dot green"></span>
+                <span className="dot orange"></span>
+                <span className="visual-label">
+                  YOUR NEXT CHAPTER
+                </span>
+              </div>
+
+              <div className="visual-content">
+                <div className="visual-icon">✦</div>
+                <p className="visual-small">
+                  LEARNING IN PROGRESS
+                </p>
+                <h2>
+                  Build skills.
+                  <br />
+                  Build your future.
+                </h2>
+
+                <div className="progress-track">
+                  <div className="progress-fill"></div>
+                </div>
+
+                <p className="progress-text">
+                  Keep learning. Keep growing.
+                </p>
+              </div>
+            </div>
+
+            <div className="floating-card">
+              <span>✦</span>
+              Learn something new
+            </div>
+          </div>
+        </section>
+
+        <section className="categories" id="courses">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">FIND YOUR NEXT SKILL</p>
+              <h2>Explore our courses</h2>
+            </div>
+
+            <p className="section-description">
+              Knowledge for wherever you want to go.
+            </p>
+          </div>
+
+          <div className="course-grid">
+            <article className="course-card">
+              <div className="course-art coding-art">
+                <span className="art-symbol">&lt;/&gt;</span>
+                <span className="art-tag">01 / CREATE</span>
+              </div>
+
+              <div className="course-info">
+                <p className="course-category">DEVELOPMENT</p>
+                <h3>Full-Stack Web Development</h3>
+                <p>
+                  Build modern websites and turn ideas into real projects.
+                </p>
+
+                <div className="course-bottom">
+                  <strong>₹1,999</strong>
+                  <a href="#about" className="course-link">
+                    Explore &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article className="course-card">
+              <div className="course-art business-art">
+                <span className="art-symbol">↗</span>
+                <span className="art-tag">02 / GROW</span>
+              </div>
+
+              <div className="course-info">
+                <p className="course-category">BUSINESS</p>
+                <h3>Business &amp; Entrepreneurship</h3>
+                <p>
+                  Learn strategy, marketing and how to grow your ideas.
+                </p>
+
+                <div className="course-bottom">
+                  <strong>₹1,499</strong>
+                  <a href="#about" className="course-link">
+                    Explore &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article className="course-card">
+              <div className="course-art design-art">
+                <span className="art-symbol">✳</span>
+                <span className="art-tag">03 / DESIGN</span>
+              </div>
+
+              <div className="course-info">
+                <p className="course-category">DESIGN</p>
+                <h3>UI/UX Design Masterclass</h3>
+                <p>
+                  Create thoughtful digital experiences and strong portfolios.
+                </p>
+
+                <div className="course-bottom">
+                  <strong>₹1,799</strong>
+                  <a href="#about" className="course-link">
+                    Explore &rarr;
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section className="bottom-banner" id="about">
+          <div>
+            <p className="eyebrow">YOUR JOURNEY STARTS HERE</p>
+            <h2>Make your next move count.</h2>
+          </div>
+
+          <a href="/courses" className="primary-button">
+            Find your course &rarr;
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        </section>
       </main>
-    </div>
+
+      <footer>
+        <a href="#home" className="logo">
+          Learnora<span>.</span>
+        </a>
+        <p>Learn something extraordinary.</p>
+        <p>&copy; 2026 Learnora</p>
+      </footer>
+    </>
   );
 }
